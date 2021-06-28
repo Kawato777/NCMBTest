@@ -3,6 +3,8 @@ var ncmb = new NCMB("8e043f4706a26a64b25e025a19d84abd9440421387079b3e31946a8a69e
 
 // ファイルストア
 var onFormSend = function(){
+    var result = document.getElementById("result");
+    result.innerHTML = "送信中";
     var fileData = document.getElementById("file-data").files[0];
     var fileName = fileData.name;
     // console.log(fileData.name);
@@ -10,10 +12,10 @@ var onFormSend = function(){
     ncmb.File
         .upload(fileName, fileData).then(function(res){
             // アップロード後処理
-            document.getElementById("result").innerHTML = "OK!";
+            result.innerHTML = "OK!";
         })
         .catch(function(err){
             // エラー処理
-            document.getElementById("result").innerHTML = err;
+            result.innerHTML = err;
         });
 }
