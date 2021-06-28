@@ -3,10 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Test</title>
-</head>
-<body>
-    <h1>あ</h1>
     <script type="text/javascript" src="js/ncmb.min.js" charset="utf-8"></script>
     <script src="js/ncmbTest.js"></script>
+</head>
+<body>
+    <p>
+        name <input type="text" id="file-name"/>
+    </p>
+    <p>
+        file <input type="file" id="file-data"/>
+    </p>
+    <button onclick="onFormSend()">send</button>
+    <p id="result">
+    </p>
 </body>
 </html>
