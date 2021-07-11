@@ -7,7 +7,7 @@ var onFormSend = function(){
     result.innerHTML = "送信中";
     var fileData = document.getElementById("file-data").files[0];
     var fileName = fileData.name;
-    // console.log(fileData.name);
+    //console.log(fileData);
 
     ncmb.File
         .upload(fileName, fileData).then(function(res){
